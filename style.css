@@ -1,0 +1,182 @@
+@import url("//fonts.googleapis.com/css?family=Source+Code+Pro|Abel|Nothing+You+Could+Do");
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Abel, Courier, monospace;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;		
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+
+h1, h2, h3 {
+    margin: 0;
+    padding-top: 1%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5em;
+    line-height: 1em;
+    color: white;
+}
+
+h3 {
+    font-family: "Source Code Pro", Courier, monospace;
+    font-size: 0.75em;
+    margin-right: 5%;
+}
+
+html {
+  color: #fff;
+  font-family: 'Abel', serif;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+blockquote {
+  position: relative;
+  margin: 40px auto;
+  width: 600px auto;
+  font-size: 18px;
+  line-height: 30px;
+  padding-left: 20px;
+  margin-top: 8px;
+  border-left: 2px solid #fff;
+}
+
+blockquote span {
+  display: block;
+  text-align: right;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.line {
+    display: block;
+    overflow-y: hidden;
+    height: 90px;
+    color: white;
+}
+
+.line.bottom {
+    line-height: 1.7em;
+    border-bottom: 3px solid white;
+}
+
+.line.top {
+    line-height: .5em;
+    border-top: 3px solid white;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.slogan {
+    font-size: 3em;
+    font-family: "Abel", Arial, sans-serif;
+    color: white;
+}
+
+.slogan .fa {
+    padding: 0 .5em;
+    font-size: .75em;
+}
+
+.social-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.social-buttons .icon-wrap {
+    padding: 0 1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f4c061;
+}
+
+.box{
+    height:100%;
+    width:100%;
+  }
+
+.gradDynamic{
+    position:relative;
+  }
+  
+  .gradDynamic:after, .gradDynamic:before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    content:"";
+    z-index:-1;
+  }
+  
+  .gradDynamic:after{
+    background:radial-gradient(circle,#95ff06,transparent);
+    background-size:400%;
+    animation:colorSpin 30s linear infinite;
+  }
+  
+  .gradDynamic:before{
+    background-color:rgb(255, 0, 0);
+  }
+
+ @keyframes colorSpin{
+    25%{background-position:0 100%}
+    50%{background-position:100% 100%}
+    75%{background-position:100% 0}
+    100%{filter:hue-rotate(360deg)}
+  }
+
+/* Some kind of... let's say... 'semi-responsiveness' */
+
+@media (max-width:960px) {
+  .container { transform: scale(.7); }
+}
+@media (max-width:840px) {
+  .container { transform: scale(.65); }
+}
+@media (max-width:800px) {
+  .container { transform: scale(.6); }
+}
+@media (max-width:780px) {
+  .container { transform: scale(.5); }
+}
+@media (max-width:600px) {
+  .container { transform: scale(.45); }
+  .slogan .fa { display: none; }
+}
+@media (max-width:480px) {
+  .container { transform: scale(.4); }
+  .slogan .fa { display: none; }
+}
